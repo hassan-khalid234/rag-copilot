@@ -40,6 +40,8 @@ A modular, framework-free Retrieval-Augmented Generation (RAG) system built in P
                                                                  ▼
                                                     [Answer + Citations UI]
 
+```
+
 ---
 
 ## 🧪 Step 4: Test the Streamlit App
