@@ -85,7 +85,6 @@ streamlit run streamlit_app.py
 ├── requirements.txt
 └── .env.example
 ```
-*(adjust to match your actual folder layout)*
  
 ## Status
  
