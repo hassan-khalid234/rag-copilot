@@ -68,25 +68,19 @@ GROQ_API_KEY=your_key_here
  
 ## Usage
  
-1. Place your PDF document(s) in the `data/` folder *(adjust path to match your actual setup)*
-2. Run the ingestion step to build the dense and sparse indexes *(add the exact command you use)*
+1. Place your PDF document(s) in the `data/` folder 
+2. Run the ingestion step to build the dense and sparse indexes
 3. Launch the app:
 ```bash
 streamlit run streamlit_app.py
 ```
  
-## Example
- 
-*(Add a screenshot or a sample question/answer pair here — e.g. a query, the reranked source chunks it pulled, and the final cited answer. This is the single most convincing addition you can make to this README — it turns the architecture diagram into proof it actually works.)*
- 
-**Tested on:** *(name what you actually indexed — course notes, past papers, a specific document set — even a small one makes this concrete)*
  
 ## Project Structure
  
 ```
 ├── data/                   # source PDFs
-├── ingestion/               # extraction, chunking, indexing
-├── retrieval/                # hybrid search + reranking logic
+├── src/                # hybrid search + reranking logic
 ├── streamlit_app.py
 ├── requirements.txt
 └── .env.example
