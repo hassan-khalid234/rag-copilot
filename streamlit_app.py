@@ -1,5 +1,6 @@
 import streamlit as st
 import time
+import tempfile
 from dotenv import load_dotenv
 
 from src.ingester import extract_text_from_pdf
@@ -36,10 +37,10 @@ with st.sidebar:
     
     if uploaded_file and not st.session_state.indexed:
         with st.spinner("Extracting & Indexing document..."):
-            # Save uploaded file temporarily
-            temp_path = f"data/{uploaded_file.name}"
-            with open(temp_path, "wb") as f:
+            # Save uploaded file to a temp path (works on any platform, no folder needed)
+            with tempfile.NamedTemporaryFile(delete=False, suffix=".pdf") as f:
                 f.write(uploaded_file.getbuffer())
+                temp_path = f.name
             
             # Run ingestion pipeline
             text = extract_text_from_pdf(temp_path)
