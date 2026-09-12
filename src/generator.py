@@ -3,7 +3,7 @@ from groq import Groq
 from typing import List
 
 class RAGGenerator:
-    def __init__(self, model_name: str = "llama-3.1-8b-instant"):
+    def __init__(self, model_name: str = "openai/gpt-oss-20b"):
         self.client = Groq()  # Automatically picks up GROQ_API_KEY from .env
         self.model_name = model_name
 
