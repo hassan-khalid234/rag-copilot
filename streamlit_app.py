@@ -19,7 +19,7 @@ st.set_page_config(
 )
 
 st.title("🤖 Production RAG Copilot")
-st.caption("Hybrid Search (BM25 + Dense) | Cross-Encoder Reranking | Llama 3.1 8B via Groq")
+st.caption("Hybrid Search (BM25 + Dense) | Cross-Encoder Reranking | GPT-OSS 20B via Groq")
 
 # Initialize persistent session state for vector DB and retriever
 if "retriever" not in st.session_state:
